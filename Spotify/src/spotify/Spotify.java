@@ -3,7 +3,7 @@ package spotify;
 public class Spotify {
 
     public static void main(String[] args) {
-        System.out.println("Hola mundo viva choloma!");
+        ReproductorCancion cancion = new ReproductorCancion();
+        cancion.setVisible(true);
     }
-    
 }
