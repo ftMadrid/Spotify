@@ -1,19 +1,22 @@
 package spotify;
 
-public class Song {
+import java.io.Serializable;
 
+public class Song implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String nombre;
     private String artista;
     private long duracion;
-    private String imagen;
+    private String imagenPath;
     private String genero;
     private String rutaArchivo;
 
-    public Song(String nombre, String artista, long duracion, String imagen, String genero, String rutaArchivo) {
+    public Song(String nombre, String artista, long duracion, String imagenPath, String genero, String rutaArchivo) {
         this.nombre = nombre;
         this.artista = artista;
         this.duracion = duracion;
-        this.imagen = imagen;
+        this.imagenPath = imagenPath;
         this.genero = genero;
         this.rutaArchivo = rutaArchivo;
     }
@@ -30,8 +33,8 @@ public class Song {
         return duracion;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getImagenPath() {
+        return imagenPath;
     }
 
     public String getGenero() {
@@ -54,15 +57,15 @@ public class Song {
         this.duracion = duracion;
     }
 
-    public void setImagenPath(String imagen) {
-        this.imagen = imagen;
+    public void setImagenPath(String imagenPath) {
+        this.imagenPath = imagenPath;
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
     }
 
-    // duracion formateada pepepepe
+    // obtengo la formacion formateada pepepepepe
     public String getDuracionFormateada() {
         long segundosTotales = duracion / 1000;
         long minutos = segundosTotales / 60;

@@ -1,12 +1,15 @@
 package spotify;
 
-public class Nodo {
+import java.io.Serializable;
 
+public class Nodo implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     Song cancion;
     Nodo siguiente;
 
     public Nodo(Song cancion) {
         this.cancion = cancion;
-        siguiente = null;
+        this.siguiente = null;
     }
 }
